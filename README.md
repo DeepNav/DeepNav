@@ -62,4 +62,49 @@ Our [36 lbs DC motor](https://www.amazon.com/gp/product/B0713ZRFCC/ref=oh_aui_de
 ![](images/dc-motor-spec.png)
 
 
+### Rudder servo
 
+In order to find a proper way of electrical controlling of the rudder, we looked up for the types of motor and the torque requirement for the rudder.
+
+Looks both servo motor and stepper motor fits, but which one to buy is decided by the torque needed to properly steel the boat and if it can easily work with Arduino.
+
+We found the following formula to decide the torque from [here](http://www.ls-france.com/en/power-assisted-hydraulic-steering-systems/torque-calculation-assist/)
+
+```
+C = S x [ (0.4 Lg) – Lc ] x V² x K
+
+C	= Torque in kgm
+S	= Total surface of rudder (H x Lg) in sq. m
+H	= Height of rudder in m
+Lg	= Width of rudder in m
+Lc	= Compensation width in m
+V	= Maximum speed of the boat in knots
+K	= Coefficient in function of total rudder angle
+
+Port to starboard	70°	K = 15.89
+Port to starboard	80°	K = 17.80
+Port to starboard	90°	K = 19.52
+
+For a boat with a steering nozzle	C x 2.0
+For twin engine power boats with 1 rudder	C x 0.5
+
+```
+![](images/schema_safran.png)
+
+And the rudder size is approximately shown as bellow
+
+![](images/rudder_size.jpg)
+
+So we have the values for above factors:
+
+```
+S = 0.004038702
+H = 0.042799m (3.37 inch/2)
+Lg = 0.047244 (3.72in /2)
+Lc = 0
+V = 3.04142 (3.5mph)
+K = 19.52 (when 90degree)
+with steering nozzle, C = C*2
+```
+
+as result, we need to find the motor with torque `C = 0.027562 kgm = 2.7kg cm`
