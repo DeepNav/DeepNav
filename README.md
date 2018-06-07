@@ -1,16 +1,5 @@
 # DeepNavigation
 
-## Control Servo Motor Using Arduino
-
-Here is a [good comparison](http://bioeng.nus.edu.sg/mm/wp-content/uploads/2012/07/MotorControl-1japwem.pdf) between servo motors and stepper motors.
-
-- A servo motor includes a sensor, usually, a [potentiometer](https://en.wikipedia.org/wiki/Potentiometer), which is a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider.  This sensor helps the servo hold its position even if external force pushes against it.
-
-- A stepper is a circle of electromagnets -- by activating a certain one, the shaft moves towards (and ideally very close to) the electromagnet.
-
-Here is a good [introduction](https://www.digikey.com/en/articles/techzone/2017/mar/servo-motors-and-control-with-arduino-platforms)
-to servo motors and Arduino controlling.
-
 ## Choose PVC Pipes
 
 When people are talking about the diameter of PVC pipe, they mean the inner diameter (ID) instead of OD. [This article](https://www.pvcfittingsonline.com/resource-center/pvc-pipe-od-size-chart/) provides the mapping from the inner diameter (ID) to the outer diameter (OD) of PVC pipes: 
@@ -61,6 +50,16 @@ Our [36 lbs DC motor](https://www.amazon.com/gp/product/B0713ZRFCC/ref=oh_aui_de
 
 ![](images/dc-motor-spec.png)
 
+## Control Servo Motor Using Arduino
+
+Here is a [good comparison](http://bioeng.nus.edu.sg/mm/wp-content/uploads/2012/07/MotorControl-1japwem.pdf) between servo motors and stepper motors.
+
+- A servo motor includes a sensor, usually, a [potentiometer](https://en.wikipedia.org/wiki/Potentiometer), which is a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider.  This sensor helps the servo hold its position even if external force pushes against it.
+
+- A stepper is a circle of electromagnets -- by activating a certain one, the shaft moves towards (and ideally very close to) the electromagnet.
+
+Here is a good [introduction](https://www.digikey.com/en/articles/techzone/2017/mar/servo-motors-and-control-with-arduino-platforms)
+to servo motors and Arduino controlling.
 
 ### Rudder servo
 
