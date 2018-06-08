@@ -34,7 +34,7 @@ If both Q1 and Q2 close (or, Q3 and Q4 close), there would be a short circuit.
 
 To prevent such illegal combinations, we can add two more transistors as the following:
 
-![](images/h-bridge-no-shortcut.jpeg)
+![](images/h-bridge-no-shortcut.png)
 
 The above configuration cannot adjust the power of the DC. To do PWM of power, we can add an ENABLE signal, which is a 1.5V waveform. ICs like [L298](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) implements this method:
 
