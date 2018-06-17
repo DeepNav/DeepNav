@@ -1,0 +1,10 @@
+*.DS_Store
+.vscode
+.idea
+.project
+.cproject
+.pydevproject
+*.pyc
+.#*
+*~
+
