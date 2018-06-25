@@ -17,27 +17,21 @@ reliability of the trained policy.
 
 ## DAGGER Pseudo Algorithm
 
-```
+1. The teacher demonstrates the task, collect the states, and the teacher's actions.
 
-The teacher demonstrates the task, collect the states, and the
-teacher's actions.
+1. Initialize the dataset as the list of collected pairs of state and action.
 
-Initialize the dataset as the list of collected pairs of state and
-action.
+1. Train the policy on the dataset.
 
-Train the policy on the dataset.
+   1. for i = 1 to N do
 
-for i = 1 to N do
-
-  Use the trained policy, collect some states.
+      1. Use the trained policy, collect some states.
   
-  In hindsight, ask the teacher the action for the collected state.
+      1. In hindsight, ask the teacher the action for the collected state.
   
-  Append the newly collected pairs of state and action to the dataset.
+      1. Append the newly collected pairs of state and action to the dataset.
   
-  Train the policy on the dataset.
-
-```
+      1. Train the policy on the dataset.
 
 ## Our Pseudo Algorithm
 
