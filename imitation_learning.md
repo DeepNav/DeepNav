@@ -18,20 +18,12 @@ reliability of the trained policy.
 ## DAGGER Pseudo Algorithm
 
 1. The teacher demonstrates the task, collect the states, and the teacher's actions.
-
 1. Initialize the dataset as the list of collected pairs of state and action.
-
-1. Train the policy on the dataset.
-
-   1. for i = 1 to N do
-
-      1. Use the trained policy, collect some states.
-  
-      1. In hindsight, ask the teacher the action for the collected state.
-  
-      1. Append the newly collected pairs of state and action to the dataset.
-  
-      1. Train the policy on the dataset.
+1. for i = 1 to N do # Train the policy on the dataset.
+   1. Use the trained policy, collect some states.
+   1. In hindsight, ask the teacher the action for the collected state.
+   1. Append the newly collected pairs of state and action to the dataset.
+   1. Train the policy on the dataset.
 
 ## Our Pseudo Algorithm
 
@@ -41,29 +33,13 @@ the sensor data to the teacher and ask him what action to take - the
 teacher has to be on the boat in the exact moment to know what action
 to take. So we modify the DAGGER algorithm to:
 
-```
-
-The teacher demonstrates driving the boat, collect the states, and the
-teacher's actions.
-
-Initialize the dataset as the list of collected pairs of state and
-action.
-
-Train the policy on the dataset.
-
-for i = 1 to N do
-
-  Let the boat self-drive with the trained policy.
-  
-  The teacher can take over the boat's control at any time and drive
-  with the teacher's policy, collect the pairs of state and action as
-  D0.
-  
-  Append D0 to the dataset.
-  
-  When the teacher is driving, train the new policy with the new
-  dataset in real-time.
-```
+1. The teacher demonstrates driving the boat, collect the states, and the teacher's actions.
+1. Initialize the dataset as the list of collected pairs of state and action.
+1. for i = 1 to N do # Train the policy on the dataset.
+   1. Let the boat self-drive with the trained policy.
+   1. The teacher can take over the boat's control at any time and drive with the teacher's policy, collect the pairs of state and action as D0.
+   1. Append D0 to the dataset.
+   1. When the teacher is driving, train the new policy with the new dataset in real-time.
 
 We think that training the new policy in real-time is essential as it
 dramatically increases the iteration speed.
