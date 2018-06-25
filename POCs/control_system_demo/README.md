@@ -35,7 +35,7 @@ We aim to build the control system that:
 
 ![](images/control_system_diagram.png)
 
-## Our Setup and Demo video
+## Our Setup and Demo video
 
 [![](images/IMG_1445.jpg)](https://youtu.be/04RkUX4lYTs)
 
